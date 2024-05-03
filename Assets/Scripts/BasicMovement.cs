@@ -5,16 +5,20 @@ using UnityEngine;
 public class BasicMovement : MonoBehaviour
 {
     [SerializeField] float moveSpeed;
+    [SerializeField] Rigidbody rb;
+    public Vector3 move;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+        float verticalInput = Input.GetAxis("Vertical");
+
+        rb.AddForce(Vector3.forward * verticalInput * moveSpeed * Time.deltaTime, ForceMode.Impulse);
+        
     }
 }
