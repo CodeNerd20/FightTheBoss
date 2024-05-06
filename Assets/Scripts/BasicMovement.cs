@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class BasicMovement : MonoBehaviour
 {
-    [SerializeField] float moveSpeed;
-    [SerializeField] Rigidbody rb;
+    public float moveSpeed;
+    public Rigidbody rb;
     public Vector3 move;
+
+    public float verticalInput;
+    public float horizontalInput;
 
     void Start()
     {
@@ -16,9 +19,10 @@ public class BasicMovement : MonoBehaviour
 
     void Update()
     {
-        float verticalInput = Input.GetAxis("Vertical");
+        verticalInput = Input.GetAxis("Vertical");
+        horizontalInput = Input.GetAxis("Horizontal");
 
-        rb.AddForce(Vector3.forward * verticalInput * moveSpeed * Time.deltaTime, ForceMode.Impulse);
-        
+        transform.Translate(Vector3.forward * verticalInput * moveSpeed * Time.deltaTime);
+        transform.Translate(Vector3.right * horizontalInput * moveSpeed * Time.deltaTime);
     }
 }
