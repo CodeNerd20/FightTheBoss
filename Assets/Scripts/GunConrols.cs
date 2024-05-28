@@ -6,24 +6,52 @@ public class GunConrols : MonoBehaviour
 {
     public float damage = 10f;
     public float range = 100f;
+    public float fireRate = 15f;
     public float impactForce = 30f;
+
+    public int maxAmmo = 10;
+    private int currentAmmo;
+    public float reloadTime = 1f;
 
     public Camera fpsCam;
     public ParticleSystem gunSmoke;
     public GameObject boom;
 
+    private float nextTimeToFire = 0f;
+
+
+    void Start()
+    {
+        currentAmmo = maxAmmo;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if(currentAmmo <= 0)
         {
+            Reload();
+            return;
+        }
+
+        if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
+        {
+            nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
         }
+    }
+
+    void Reload()
+    {
+        Debug.Log("Reloading.......");
+        currentAmmo = maxAmmo;
     }
 
     void Shoot()
     {
         gunSmoke.Play();
+
+        currentAmmo--;
 
         RaycastHit hit;
         if(Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
