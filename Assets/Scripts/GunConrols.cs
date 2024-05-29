@@ -12,6 +12,7 @@ public class GunConrols : MonoBehaviour
     public int maxAmmo = 10;
     private int currentAmmo;
     public float reloadTime = 1f;
+    private bool isReloading = false;
 
     public Camera fpsCam;
     public ParticleSystem gunSmoke;
@@ -19,18 +20,30 @@ public class GunConrols : MonoBehaviour
 
     private float nextTimeToFire = 0f;
 
+    public Animator animator;
 
     void Start()
     {
         currentAmmo = maxAmmo;
     }
 
+    void OnEnable()
+    {
+        isReloading = false;
+        animator.SetBool("Reloading", false);
+    }
+
     // Update is called once per frame
     void Update()
     {
+        if (isReloading)
+        {
+            return;
+        }
+
         if(currentAmmo <= 0)
         {
-            Reload();
+            StartCoroutine(Reload());
             return;
         }
 
@@ -41,10 +54,19 @@ public class GunConrols : MonoBehaviour
         }
     }
 
-    void Reload()
+    IEnumerator Reload()
     {
+        isReloading = true;
         Debug.Log("Reloading.......");
+
+        animator.SetBool("Reloading", true);
+
+        yield return new WaitForSeconds(reloadTime - .25f);
+        animator.SetBool("Reloading", false);
+        yield return new WaitForSeconds(.25f);
+
         currentAmmo = maxAmmo;
+        isReloading = false;
     }
 
     void Shoot()
