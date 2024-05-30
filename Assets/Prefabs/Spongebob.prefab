@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1268432232904915284, guid: 041d64de3a611a94d894541ad430cc4a, type: 3}
+  - {fileID: 2100000, guid: 124d06b9efe2a224db8000f47d35c401, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -160,7 +160,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -9125951723932490201, guid: 041d64de3a611a94d894541ad430cc4a, type: 3}
+  - {fileID: 2100000, guid: 42bad045b348a894da781dfd80565466, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -258,7 +258,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6723130289460539964, guid: 041d64de3a611a94d894541ad430cc4a, type: 3}
+  - {fileID: 2100000, guid: c490848e4cc2ba641b40cf7d781ff322, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -356,7 +356,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -759034069991596527, guid: 041d64de3a611a94d894541ad430cc4a, type: 3}
+  - {fileID: 2100000, guid: 80df01960921e9d41a9d7c557eb0da19, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -454,7 +454,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 3170531198488047425, guid: 041d64de3a611a94d894541ad430cc4a, type: 3}
+  - {fileID: 2100000, guid: 8c5799851a03b504a8c367c387b07c78, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -551,7 +551,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -5637652675625914632, guid: 041d64de3a611a94d894541ad430cc4a, type: 3}
+  - {fileID: 2100000, guid: fde68e92569ae4f448c23626db156b27, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -648,7 +648,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -9125951723932490201, guid: 041d64de3a611a94d894541ad430cc4a, type: 3}
+  - {fileID: 2100000, guid: 42bad045b348a894da781dfd80565466, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -746,7 +746,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -8094484707356568818, guid: 041d64de3a611a94d894541ad430cc4a, type: 3}
+  - {fileID: 2100000, guid: ce941c5fe867b7d4a94a021c172b7441, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -844,7 +844,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1268432232904915284, guid: 041d64de3a611a94d894541ad430cc4a, type: 3}
+  - {fileID: 2100000, guid: 124d06b9efe2a224db8000f47d35c401, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -894,7 +894,7 @@ GameObject:
   - component: {fileID: 5600408403551427430}
   m_Layer: 0
   m_Name: Spongebob
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -954,6 +954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 150
+  pointValue: 25
 --- !u!114 &5600408403551427430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1029,7 +1030,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -8094484707356568818, guid: 041d64de3a611a94d894541ad430cc4a, type: 3}
+  - {fileID: 2100000, guid: ce941c5fe867b7d4a94a021c172b7441, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1127,7 +1128,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8627644809163848826, guid: 041d64de3a611a94d894541ad430cc4a, type: 3}
+  - {fileID: 2100000, guid: 4168b71b822586d47ac59d7b2ecb5f76, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

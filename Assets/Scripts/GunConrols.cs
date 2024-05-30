@@ -21,6 +21,7 @@ public class GunConrols : MonoBehaviour
     private float nextTimeToFire = 0f;
 
     public Animator animator;
+    public GameManager gameManager;
 
     void Start()
     {
@@ -41,7 +42,7 @@ public class GunConrols : MonoBehaviour
             return;
         }
 
-        if(currentAmmo <= 0)
+        if (currentAmmo <= 0)
         {
             StartCoroutine(Reload());
             return;

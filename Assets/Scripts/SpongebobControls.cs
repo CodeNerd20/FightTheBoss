@@ -7,6 +7,7 @@ public class SpongebobControls : MonoBehaviour
     public float speed;
     private Rigidbody spongyRb;
     private GameObject player;
+    private GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
@@ -22,4 +23,5 @@ public class SpongebobControls : MonoBehaviour
 
         spongyRb.AddForce(lookDirection * speed);
     }
+
 }

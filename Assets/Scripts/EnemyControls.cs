@@ -6,10 +6,13 @@ public class EnemyControls : MonoBehaviour
 {
     public float health = 100f;
 
+    public int pointValue;
+    private GameManager gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -30,5 +33,6 @@ public class EnemyControls : MonoBehaviour
     void Die()
     {
         Destroy(gameObject);
+        gameManager.UpdateScore(pointValue);
     }
 }
