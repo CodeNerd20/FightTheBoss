@@ -954,7 +954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 150
-  pointValue: 25
+  pointValue: 50
 --- !u!114 &5600408403551427430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -967,7 +967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d2e9208db4f84c4c8056b86ff3ef567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 10
 --- !u!1 &7069339172107781953
 GameObject:
   m_ObjectHideFlags: 0
